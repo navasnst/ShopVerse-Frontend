@@ -1,0 +1,79 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100%;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Inputs & textareas */
+input,
+textarea {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-family: inherit;
+}
+
+/* Scrollbar (optional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+/* Dark mode support */
+html.dark {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+html.dark body {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+html.dark input,
+html.dark textarea {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #f5f5f5;
+}
+
+html.dark button {
+    color: #fff;
+}
+
+/* Utility classes (optional) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
