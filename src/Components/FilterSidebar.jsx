@@ -63,10 +63,10 @@ export default function FilterSidebar({ filters, setFilters }) {
         <input value={local.brand || ''} onChange={(e) => setLocal({ ...local, brand: e.target.value })} placeholder="Brand" className="input" />
       </div> */}
 
-      <div>
+      {/* <div>
         <h4 className="font-semibold">Vendor</h4>
         <input value={local.vendor || ''} onChange={(e) => setLocal({ ...local, vendor: e.target.value })} placeholder="Vendor id or name" className="input" />
-      </div>
+      </div> */}
 
       <div>
         <h4 className="font-semibold">Rating</h4>
