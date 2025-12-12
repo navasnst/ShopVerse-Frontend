@@ -68,7 +68,13 @@ export default function AdminLogin() {
           >
             Register
           </span> */}
-          
+
+          <span
+            className="text-blue-500 cursor-pointer hover:underline"
+            onClick={() => navigate("/admin/register")}
+          >
+            Register
+          </span>
         </p>
       </form>
     </div>
