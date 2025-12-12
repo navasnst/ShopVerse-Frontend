@@ -17,7 +17,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("http://localhost:5000/api/admin/login", form);
+      const res = await api.post("/admin/login", form);
       login(res.data.admin, res.data.token, "admin");
       navigate("/admin/dashboard");
     } catch (err) {
