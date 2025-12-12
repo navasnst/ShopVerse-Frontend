@@ -131,15 +131,12 @@ export default function AdminProfile() {
             alt="Admin"
             className="w-32 h-32 object-cover rounded-full border-4 border-blue-500 shadow-md"
           /> */}
-          <img
-         src={
-          imagePreview?.startsWith("http")
-            ? imagePreview
-            : `${import.meta.env.VITE_API_URL.replace("/api", "")}${imagePreview}`
-          }
-          alt="Admin"
-          className="w-32 h-32 object-cover rounded-full border-4 border-blue-500 shadow-md"
-          />
+         <img
+  src={`${import.meta.env.VITE_API_URL.replace('/api', '')}/uploads/profileImages/${filename}`}
+  alt="Profile"
+  className="w-32 h-32 object-cover rounded-full border-4 border-blue-500 shadow-md"
+/>
+
 
           <label
             htmlFor="profileImage"
