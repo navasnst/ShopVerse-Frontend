@@ -105,11 +105,21 @@ export default function SellerProfile() {
 
       <div className="flex flex-col items-center">
         <div className="relative w-32 h-32">
-          <img
+          {/* <img
             src={imagePreview}
             alt="Seller"
             className="w-32 h-32 object-cover rounded-full border-4 border-blue-500 shadow-md"
-          />
+          /> */}
+          <img
+  src={
+    imagePreview?.startsWith("http")
+      ? imagePreview
+      : `${import.meta.env.VITE_API_URL.replace("/api", "")}/uploads/profileImages/${imagePreview}`
+  }
+  alt="Seller"
+  className="w-32 h-32 object-cover rounded-full border-4 border-blue-500 shadow-md"
+/>
+
           <label
             htmlFor="profileImage"
             className="absolute bottom-2 right-2 bg-blue-600 p-2 rounded-full cursor-pointer hover:bg-blue-700 transition"
