@@ -17,7 +17,7 @@ export default function AdminRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("http://localhost:5000/api/admin/register", form);
+      const res = await api.post("/admin/register", form);
 
       // ✅ Save admin in AuthContext + localStorage
       login(res.data.admin, res.data.token, "admin");

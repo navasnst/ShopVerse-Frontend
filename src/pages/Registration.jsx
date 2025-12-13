@@ -22,7 +22,7 @@ export default function RegistrationForm() {
     e.preventDefault();
 
     try {
-      const res = await api.post("http://localhost:5000/api/auth/register", {
+      const res = await api.post("/auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
