@@ -19,10 +19,12 @@ export default function LoginForm() {
     e.preventDefault();
 
     try {
-      const res = await api.post(
-        "http://localhost:5000/api/auth/login",
-        formData
-      );
+      // const res = await api.post(
+      //   "http://localhost:5000/api/auth/login",
+      //   formData
+      // );
+      const res = await api.post("/auth/login", formData);
+
 
       // Update AuthContext
       login(res.data.user, res.data.token); // sets user in context and localStorage

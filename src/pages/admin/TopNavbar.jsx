@@ -30,7 +30,7 @@ export default function SellerTopNavbar({ onToggleSidebar }) {
         return () => clearInterval(interval);
     }, [token]);
 
-    const handleNotifications = () => navigate("/seller/notifications");
+    const handleNotifications = () => navigate("/admin/notifications");
 
     return (
         <header className="fixed top-0 left-0 w-full flex items-center justify-between px-4 py-3 bg-white shadow z-50">

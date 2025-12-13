@@ -36,7 +36,11 @@ export default function AdminOrders() {
                                 <td>{o.user?.name}</td>
                                 <td>{o.products[0]?.vendor?.shopName || "N/A"}</td>
                                 <td>₹{o.totalPrice}</td>
-                                <td>{o.orderStatus}</td>
+                                <td>
+                                    {o.products?.[0]?.orderStatus
+                                        ? o.products[0].orderStatus.charAt(0).toUpperCase() + o.products[0].orderStatus.slice(1)
+                                        : "N/A"}
+                                </td>
                                 <td>{new Date(o.createdAt).toLocaleDateString()}</td>
                             </tr>
                         ))}
