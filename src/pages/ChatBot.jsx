@@ -22,7 +22,7 @@ export default function ChatBot() {
 
     try {
       const response = await api.post(
-        "http://localhost:5000/api/chatbot/message",
+        "/chatbot/message",
         {
           userId: "guest",
           message: input,
