@@ -13,7 +13,7 @@ export default function AdminNotifications() {
 
     const fetchNotifications = async () => {
         try {
-            const res = await api.get("/api/admin/notifications", {
+            const res = await api.get("/admin/notifications", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (res.data.success) {
@@ -26,7 +26,7 @@ export default function AdminNotifications() {
 
     const markAsRead = async (id) => {
         try {
-            await api.put(`/api/admin/notifications/${id}/read`, {}, {
+            await api.put(`/admin/notifications/${id}/read`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setNotifications((prev) =>
