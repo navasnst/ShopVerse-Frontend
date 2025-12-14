@@ -62,12 +62,13 @@ export default function AdminLogin() {
         <p className="text-sm mt-3 text-center">
           Don’t have an account? you are not Admin!
           {" "}
-          {/* <span
+          
+           <span
             className="text-blue-500 cursor-pointer hover:underline"
             onClick={() => navigate("/admin/register")}
           >
             Register
-          </span> */}
+          </span>
         </p>
       </form>
     </div>
