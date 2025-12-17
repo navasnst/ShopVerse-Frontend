@@ -14,30 +14,33 @@ export default function Contact() {
 
   // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/contact`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
-        }
-      );
-
-      if (response.ok) {
-        setSubmitted(true);
-        setForm({ name: "", email: "", message: "" });
-        setTimeout(() => setSubmitted(false), 3000);
-      } else {
-        alert("❌ Failed to send message. Please try again later.");
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/contact`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
       }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("⚠️ Something went wrong. Please try again later.");
+    );
+
+    if (response.ok) {
+      setSubmitted(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 3000);
+    } else {
+      alert("❌ Failed to send message");
     }
-  };
+  } catch (error) {
+    console.error("Contact error:", error);
+    alert("⚠️ Server error");
+  }
+};
+
 
   return (
     <div className="min-h-screen flex flex-col mtbg-lightCard dark:bg-darkCard shadow">
