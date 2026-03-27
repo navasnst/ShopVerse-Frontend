@@ -11,9 +11,9 @@ export default function SubNavbar() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      {/* className="bg-lightCard dark:bg-darkCard border-b border-blue-100 dark:border-gray-700 shadow-sm sticky top-20 z-40 w-full" */}
         className="bg-lightCard dark:bg-darkCard border-b border-blue-100 dark:border-gray-700 shadow-sm sticky top-[70px] md:top-[80px] z-40 w-full"
-    >
+    >{/* className="bg-lightCard dark:bg-darkCard border-b border-blue-100 dark:border-gray-700 shadow-sm sticky top-20 z-40 w-full" */}
+      
       {/* <div className="flex justify-center gap-10 py-3 items-center"> */}
       <div className="flex items-center gap-4 px-3 py-2 overflow-x-auto whitespace-nowrap">
         {/* ✅ Navigation Links */}
