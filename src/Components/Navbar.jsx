@@ -102,8 +102,8 @@ export default function Navbar() {
     >
       {/* <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"> */}
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        {/* <div className="flex justify-between items-center h-20"> */}
-        <div className="flex justify-between items-center h-20 flex-wrap md:flex-nowrap">
+        <div className="flex justify-between items-center h-20">
+        {/* <div className="flex justify-between items-center h-20 flex-wrap md:flex-nowrap"> */}
           {/* ✅ Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
