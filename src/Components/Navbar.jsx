@@ -100,8 +100,10 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 text-white shadow-lg sticky top-0 z-50 backdrop-blur-md"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      {/* <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"> */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        {/* <div className="flex justify-between items-center h-20"> */}
+        <div className="flex justify-between items-center h-20 flex-wrap md:flex-nowrap">
           {/* ✅ Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -112,10 +114,10 @@ export default function Navbar() {
                 <img
                   src="/shop logo.png"
                   alt="Logo"
-                  className="w-12 h-12 rounded-full object-cover shadow-md ring-2 ring-white/30"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover shadow-md ring-2 ring-white/30"
                 />
               </Link>
-              <h1 className="text-3xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-300 bg-clip-text text-transparent drop-shadow-md tracking-wide">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-300 bg-clip-text text-transparent drop-shadow-md tracking-wide">
                 ShopVerse
               </h1>
             </div>
@@ -155,7 +157,8 @@ export default function Navbar() {
 
 
           {/* ✅ Right Side Buttons */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* <div className="flex items-center gap-3 sm:gap-4"> */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             {/* Categories */}
             <div className="relative hidden md:block">
               <button
