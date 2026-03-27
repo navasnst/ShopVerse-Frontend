@@ -103,7 +103,8 @@ export default function Navbar() {
       {/* <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"> */}
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* <div className="flex justify-between items-center h-20"> */}
-        <div className="flex justify-between items-center h-20 flex-wrap md:flex-nowrap">
+        {/* <div className="flex justify-between items-center h-20 flex-wrap md:flex-nowrap"> */}
+        <div className="flex justify-between items-center flex-wrap md:flex-nowrap py-2 gap-2">
           {/* ✅ Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -158,7 +159,8 @@ export default function Navbar() {
 
           {/* ✅ Right Side Buttons */}
           {/* <div className="flex items-center gap-3 sm:gap-4"> */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          {/* <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0"> */}
+          <div className="flex items-center gap-1 sm:gap-2 flex-wrap md:flex-nowrap">
             {/* Categories */}
             <div className="relative hidden md:block">
               <button
@@ -200,9 +202,9 @@ export default function Navbar() {
             <Link to="/cart" className="block">
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="p-2 rounded-full hover:bg-white/20 transition relative"
+                className="p-1.5 sm:p-2 rounded-full hover:bg-white/20 transition relative"
               >
-                <ShoppingCart size={24} />
+                <ShoppingCart size={20} className="sm:w-6 sm:h-6"/>
               </motion.button>
             </Link>
 
@@ -211,7 +213,7 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="flex items-center gap-2 bg-white/20 px-3 py-1.5 rounded-full hover:bg-white/30 transition text-sm md:px-4 md:py-2"
+                  className="flex items-center gap-2 bg-white/20 px-2 py-1 text-xs sm:px-3 sm:py-1.5 rounded-full hover:bg-white/30 transition text-sm md:px-4 md:py-2"
                 >
                   <img
                     src={
@@ -360,7 +362,7 @@ export default function Navbar() {
               className="md:hidden p-2 rounded-full hover:bg-white/20 transition"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -379,7 +381,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="self-end p-2 rounded-full hover:bg-gray-200 transition mb-4"
               >
-                <X size={24} />
+                <X size={20} className="sm:w-6 sm:h-6" />
               </button>
               
               <div className="mb-4 relative">
@@ -441,7 +443,7 @@ export default function Navbar() {
 
               <div className="mt-auto flex flex-col gap-3">
                 <Link to="/cart" className="flex items-center gap-2">
-                  <ShoppingCart size={22} /> Cart
+                  <ShoppingCart size={20} /> Cart
                 </Link>
                 {user ? (
                   <>
@@ -456,7 +458,7 @@ export default function Navbar() {
                       className="flex items-center gap-2"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <User size={22} /> Profile
+                      <User size={20} /> Profile
                     </Link>
                     <button
                       onClick={handleLogout}
@@ -467,7 +469,7 @@ export default function Navbar() {
                   </>
                 ) : (
                   <Link to="/login" className="flex items-center gap-2">
-                    <LogIn size={22} /> Login
+                    <LogIn size={20} /> Login
                   </Link>
                 )}
               </div>
