@@ -11,14 +11,15 @@ export default function SubNavbar() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-lightCard dark:bg-darkCard border-b border-blue-100 dark:border-gray-700 shadow-sm fixed top-16 left-0 w-full z-40"
+      className="bg-lightCard dark:bg-darkCard border-b border-blue-100 dark:border-gray-700 shadow-sm sticky top-20 z-40 w-full"
     >
-      <div className="flex justify-center gap-10 py-3 items-center">
+      {/* <div className="flex justify-center gap-10 py-3 items-center"> */}
+      <div className="flex items-center gap-4 px-3 py-2 overflow-x-auto whitespace-nowrap">
         {/* ✅ Navigation Links */}
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
+            `whitespace-nowrap flex-shrink-0 text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
               isActive
                 ? "text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 dark:border-blue-400"
                 : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
@@ -31,7 +32,7 @@ export default function SubNavbar() {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            `text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
+            `whitespace-nowrap flex-shrink-0 text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
               isActive
                 ? "text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 dark:border-blue-400"
                 : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
@@ -44,7 +45,7 @@ export default function SubNavbar() {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            `text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
+            `whitespace-nowrap flex-shrink-0 text-base font-medium px-3 py-1 rounded-md transition-all duration-200 ${
               isActive
                 ? "text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 dark:border-blue-400"
                 : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
@@ -55,11 +56,12 @@ export default function SubNavbar() {
         </NavLink>
 
         {/* ✅ Icons Section */}
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4"> */}
+        <div className="flex items-center gap-3 flex-shrink-0">
           <NavLink
             to="/myorders"
             className={({ isActive }) =>
-              `text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 ${
+              `whitespace-nowrap flex-shrink-0 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 ${
                 isActive ? "text-blue-700 dark:text-blue-400" : ""
               }`
             }
@@ -71,7 +73,7 @@ export default function SubNavbar() {
           <NavLink
             to="/wishlist"
             className={({ isActive }) =>
-              `text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 ${
+              `whitespace-nowrap flex-shrink-0 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 ${
                 isActive ? "text-blue-700 dark:text-blue-400" : ""
               }`
             }
